@@ -43,9 +43,10 @@
 //     );
 //   }
 // }
-
-import 'package:first_app/Home_page.dart';
+import 'package:first_app/Pages/Login_Page.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'Pages/Home_page.dart';
 
 void main(){
   runApp(MyApp());
@@ -54,9 +55,21 @@ void main(){
 class MyApp  extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
-      home: HomePage()
+      // home: HomePage(),
+          themeMode: ThemeMode.light,
+          theme: ThemeData(
+            primarySwatch: Colors.deepPurple
+          ),
+          darkTheme: ThemeData(
+          brightness: Brightness.dark
+      ),
+      initialRoute: "/home",
+      routes: {
+        "/": (context) => LoginPage(),
+        "/home": (context) => HomePage(),
+        "/Login" :(context) => LoginPage()
+      },
     );
   }
 }
