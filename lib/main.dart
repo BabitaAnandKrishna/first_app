@@ -44,6 +44,7 @@
 //   }
 // }
 import 'package:first_app/Pages/Login_Page.dart';
+import 'package:first_app/Pages/cart_page.dart';
 import 'package:first_app/utils/routes.dart';
 import 'package:first_app/widgets/theme.dart';
 import 'package:flutter/material.dart';
@@ -66,7 +67,8 @@ class MyApp  extends StatelessWidget {
       routes: {
         "/": (context) => LoginPage(),
         MyRoutes.homeRoute: (context) => HomePage(),
-        MyRoutes.loginRoute:(context) => LoginPage()
+        MyRoutes.loginRoute:(context) => LoginPage(),
+        MyRoutes.cartRoute:(context) => CartPage()
       },
     );
   }
